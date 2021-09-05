@@ -34,6 +34,7 @@ if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
+    export OF_MAINTAINER=xSylla
    	export TW_DEFAULT_LANGUAGE="en"
 	export LC_ALL="C"
  	export ALLOW_MISSING_DEPENDENCIES=true
@@ -42,7 +43,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_TARGET_DEVICES="monet,vangogh"
 	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
 	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
-        export OF_QUICK_BACKUP_LIST="/boot;/data;"
+    export OF_QUICK_BACKUP_LIST="/boot;/data;"
     export OF_SCREEN_H=2340
     export OF_STATUS_H=80
     export OF_STATUS_INDENT_LEFT=48
@@ -53,17 +54,17 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 	export OF_NO_TREBLE_COMPATIBILITY_CHECK=1
 	export OF_NO_MIUI_PATCH_WARNING=1
-        export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
-        export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
-        export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
+    export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
+    export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
+    export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
 	export FOX_USE_BASH_SHELL=1
 	export FOX_ASH_IS_BASH=1
 	export FOX_USE_NANO_EDITOR=1
 	export FOX_USE_TAR_BINARY=1
 	export OF_SKIP_MULTIUSER_FOLDERS_BACKUP=1
-        export FOX_R11=1
-        export OF_FLASHLIGHT_ENABLE=0
-        export FOX_DELETE_AROMAFM=1
+    export FOX_R11=1
+    export OF_FLASHLIGHT_ENABLE=0
+    export FOX_DELETE_AROMAFM=1
 	export OF_PATCH_AVB20=1
 
         #export FOX_ADVANCED_SECURITY=1
