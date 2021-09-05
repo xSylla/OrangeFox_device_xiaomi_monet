@@ -41,8 +41,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_KEEP_DM_VERITY_FORCED_ENCRYPTION=1
 	export TARGET_DEVICE_ALT="monet,vangogh"
 	export OF_TARGET_DEVICES="monet,vangogh"
-	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
-	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
     export OF_QUICK_BACKUP_LIST="/boot;/data;"
     export OF_SCREEN_H=2340
     export OF_STATUS_H=80
