@@ -4,14 +4,16 @@
 
 # mount point  fstype  device                             device2                flags
 
-/system_root 	ext4    /dev/block/mapper/system 	flags=display="System"
-/vendor 	ext4    /dev/block/mapper/vendor 	flags=display="Vendor"
-/product 	ext4    /dev/block/mapper/product 	flags=display="Product"
-
-#system		/system		ext4		logical
-#vendor		/vendor		ext4		display="Vendor";logical
-#product	/product	ext4		display="Product";logical
-
+system           /system   ext4                                            flags=display="System"
+system_ext       /system_ext    ext4                                       flags=display="System_EXT"
+vendor           /vendor        ext4                                       flags=display="Vendor"
+product          /product       ext4                                       flags=display="Product"
+odm              /odm           ext4                                       flags=display="ODM"
+/system          emmc           /dev/block/mapper/system                   flags=display="System";flashimg=1;backup=1
+/system_ext      emmc           /dev/block/mapper/system_ext               flags=display="System_EXT";flashimg=1;backup=1
+/vendor          emmc           /dev/block/mapper/vendor                   flags=display="Vendor";flashimg=1;backup=1
+/product         emmc           /dev/block/mapper/product                  flags=display="Product";flashimg=1;backup=1
+/odm             emmc           /dev/block/mapper/odm                      flags=display="ODM";flashimg=1;backup=1
 /super_image   	emmc    /dev/block/bootdevice/by-name/super                       flags=backup=1;display="Super"
 /cache         	ext4    /dev/block/bootdevice/by-name/cache			  flags=display="Cache"
 /data          	f2fs    /dev/block/bootdevice/by-name/userdata                    flags=fileencryption=ice:aes-256-cts;wrappedkey;keydirectory=/metadata/vold/metadata_encryption
