@@ -2,45 +2,36 @@
 # This script is needed to automatically set device props.
 
 
-load_gauguin()
+load_monet()
 {
-    resetprop "ro.product.model" "Mi10t lite"
-    resetprop "ro.product.name" "gauguin"
-    resetprop "ro.build.product" "gauguin"
-    resetprop "ro.product.device" "gauguin"
-    resetprop "ro.vendor.product.device" "gauguin"
+    resetprop "ro.product.model" "Mi 10 lite 5G"
+    resetprop "ro.product.name" "monet"
+    resetprop "ro.build.product" "monet"
+    resetprop "ro.product.device" "monet"
+    resetprop "ro.vendor.product.device" "monet"
 }
 
-load_gauguinpro()
+load_vangogh()
 {
-    resetprop "ro.product.model" "Redmi Note 9 Pro 5G"
-    resetprop "ro.product.name" "gauguinpro"
-    resetprop "ro.build.product" "gauguinpro"
-    resetprop "ro.product.device" "gauguinpro"
-    resetprop "ro.vendor.product.device" "gauguinpro"
-}
-
-load_gauguininpro()
-{
-    resetprop "ro.product.model" "Mi10i"
-    resetprop "ro.product.name" "gauguininpro"
-    resetprop "ro.build.product" "gauguininpro"
-    resetprop "ro.product.device" "gauguininpro"
-    resetprop "ro.vendor.product.device" "gauguininpro"
+    resetprop "ro.product.model" "Mi 10 lite Zoom"
+    resetprop "ro.product.name" "vangogh"
+    resetprop "ro.build.product" "vangogh"
+    resetprop "ro.product.device" "vangogh"
+    resetprop "ro.vendor.product.device" "vangogh"
 }
 
 project=$(getprop ro.boot.hwname)
 echo $project
 
 case $project in
-    "gauguin")
-        load_gauguin
+    "monet")
+        load_monet
         ;;
-    "gauguinpro")
-        load_gauguinpro
+    "vangogh")
+        load_vangogh
         ;;
     *)
-        load_gauguin
+        load_monet
         ;;
 esac
 
