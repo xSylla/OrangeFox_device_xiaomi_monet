@@ -33,6 +33,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a75
 
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
+TARGET_USES_64_BIT_BINDER := true
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := monet,vanogh
@@ -127,6 +128,7 @@ BOARD_ROOT_EXTRA_FOLDERS := bluetooth dsp firmware persist
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 # TWRP specific build flags
+BOARD_HAS_NO_REAL_SDCARD := true
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
