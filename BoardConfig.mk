@@ -36,7 +36,7 @@ ENABLE_SCHEDBOOST := true
 TARGET_USES_64_BIT_BINDER := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := monet,vanogh
+TARGET_OTA_ASSERT_DEVICE := monet,vangogh
 
 # AVB
 BOARD_AVB_ENABLE := true
